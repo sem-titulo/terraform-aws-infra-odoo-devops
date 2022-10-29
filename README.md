@@ -11,7 +11,7 @@ Infraestrutura aws com terraform
 + S3
 + SCRIPTS DE INICIALIZAÇÃO DE MÁQUINAS
 
-## Varíaveis de ambiente
+## Variáveis de ambiente
 
 + São definidas por terraform.tvars
 + Devem ser deffinidas por ambiente
