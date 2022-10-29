@@ -1,0 +1,5 @@
+region        = "us-east-1"
+name          = "jmenegassi-erp-odoo-1"
+env           = "prod"
+instance_type = "t2.micro"
+key_name      = "acesso_root_maquina_odoo_jmenegassi"
