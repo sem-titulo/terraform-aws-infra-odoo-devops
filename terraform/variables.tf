@@ -1,3 +1,23 @@
+variable "project_name" {
+  description = "Define what region the instance will be deployed"
+}
+
+variable "git_repository_branch" {
+  description = "Define what region the instance will be deployed"
+}
+
+variable "git_repository_url" {
+  description = "Define what region the instance will be deployed"
+}
+
+variable "git_token" {
+  description = "Define what region the instance will be deployed"
+}
+
+variable "git_user" {
+  description = "Define what region the instance will be deployed"
+}
+
 variable "region" {
   description = "Define what region the instance will be deployed"
 }

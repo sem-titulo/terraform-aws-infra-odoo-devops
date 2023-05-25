@@ -1,10 +1,22 @@
+data "template_file" "init_script" {
+  template = file("${path.module}/init.sh.tpl")
+
+  vars = {
+    GIT_USER = var.git_user
+    GIT_TOKEN = var.git_token
+    GIT_REPOSITORY_URL = var.git_repository_url
+    GIT_REPOSITORY_BRANCH = var.git_repository_branch
+    PROJECT_NAME = var.project_name
+  }
+}
+
 
 resource "aws_instance" "server" {
   ami           = var.ami
   instance_type = var.instance_type
   key_name      = var.key_name
 
-  user_data = file("init.sh")
+  user_data = data.template_file.init_script.rendered
 
   ebs_block_device {
     device_name = "/dev/sda1"
